@@ -1,0 +1,9 @@
+services:
+  bitname:
+    build: .
+    ports:
+      - "6002:6002"
+    volumes:
+      - ./DATA.json:/DATA.json:ro
+    command: ["/DATA.json"]
+    restart: unless-stopped
